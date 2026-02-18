@@ -233,7 +233,7 @@ body{
  /*   background-color: aqua;*/
     display: grid;
     grid-template-columns: repeat(3,1fr);
-    gap: 20px;
+    gap: 25px;
     margin-top: 20px;
 }
 .skill-box{
@@ -248,6 +248,10 @@ body{
    transition: .7s ease-in-out;
    box-shadow: 10px 10px 10px 5px rgb(10, 10, 10);
 
+}
+.skill-box p{
+    position: relative;
+    right: 80px;
 }
 .skill-box h4{
     position: relative;
