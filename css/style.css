@@ -3,15 +3,23 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
 }
 
 body{
-    background-color: #f5f7f9;
+    background-color:rgba(245, 245, 245, 0.926);
+    overflow-x: hidden;
       
 }
 
 /* Navbar */
 .navbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    z-index: 1000;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -28,18 +36,15 @@ body{
     font-size: 22px;
     font-weight: 600;
 }
-
 .logo i{
     font-size: 26px;
 }
-
 /* Menu */
 .menu{
     list-style: none;
     display: flex;
     gap: 30px;
 }
-
 .menu li a{
     text-decoration: none;
     color: #e5e7eb;
@@ -47,9 +52,8 @@ body{
     position: relative;
     transition: 0.3s;
 }
-
 .menu li a::after{
-    content: "";
+   
     position: absolute;
     width: 0;
     height: 2px;
@@ -58,44 +62,32 @@ body{
     background-color: #6fa8ff;
     transition: 0.3s;
 }
-
 .menu li a:hover{
     color: #2704ec;
 }
-
 .menu li a:hover::after{
     width: 100%;
 }
-
 /* Social Icons */
 .social-icons{
     display: flex;
     gap: 18px;
 }
-
 .social-icons a{
     color: #f6f5f5;
     font-size: 18px;
     transition: 0.3s;
 }
-
 .social-icons a:hover{
     transform: translateY(-3px) scale(1.15);
-
-
 /* Brand Colors */
 .social-icons a:nth-child(1):hover{ color:#f9f0f3; } /* Instagram */
 .social-icons a:nth-child(2):hover{ color:#eceef0; } /* Facebook */
 .social-icons a:nth-child(3):hover{ color:#f8fbf9; } /* WhatsApp */
 .social-icons a:nth-child(4):hover{ color:#f5f0f2; } /* WhatsApp */
-
-
 }
-
 /*Hero section*/
 /* Hero Section */
-
-
 .typing{
     font-size: 28px;
     font-weight: bold;
@@ -106,7 +98,6 @@ body{
     width: 0;
     animation: typing 8s steps(30) infinite;
 }
-
 .typing span::before{
     color: rgb(2, 2, 106);
     content: "I am Frontend Developer";
@@ -120,10 +111,7 @@ body{
         60%{width: 0;}
         80%{width: 26ch;}
         100%{width: 26ch;}
-
-
 }
-
 @keyframes changeText {
   0%,50% {
     content: "I am Frontend Developer";
@@ -132,14 +120,11 @@ body{
     content: "I am Backend Developer";
   }
 }
-
 .line{
     width: 0;
     overflow:hidden;
     white-space: nowrap;
 }
-
-
 .one{
     animation: typing 2s steps(22) forwards ;
 }
@@ -147,9 +132,6 @@ body{
     animation: typing 2s steps(21) forwards;
     animation-delay: 2s;
 }
-
-
-
 .hero-container{
     width: 100%;
     padding: 20px;
@@ -157,13 +139,12 @@ body{
     align-content: center;
     justify-content: space-around;
 }
-
 .profile-outer{
     height: 500px;
     width: 40%;
     display: flex;
     align-items: center;
-     transition: .3s ease-in-out;
+  
     justify-content: center;
 }
 .profile{
@@ -178,12 +159,6 @@ body{
    
     border-radius: 50%;
 }
-
-.profile :hover{
-
-    
-    transform: translateY(-6px);
-}
 .info-outer{
     height: 500px;
     width: 50%;
@@ -193,7 +168,6 @@ body{
     align-items: center;
     justify-content: center;
 }
-
 .info-outer h1{
     font-size: 3rem;
 }
@@ -203,17 +177,12 @@ body{
     font-size: 1.1rem;
     text-align: center;
 }
-
-
-
 /* about */
-
 #about h1{
     color:rgb(8, 7, 7);
     text-align: center;
     font-size: 3rem;
 }
-
 #about hr{
     height: 5px;
     width: 60%;
@@ -222,25 +191,20 @@ body{
     border-radius: 10px;
     border: none;
 }
-
 .about-text{
     margin: 30px auto;
     width: 80%;
     color: rgb(12, 11, 11);
     text-align: justify;
 }
-
 .about-text p{
     margin-top:15px ;
     font-size: 18px;
 }
-
 .about-text span{
     font-weight: bold;
     color:rgba(2, 2, 143, 0.975);
 }
-
-
 .about-text ul{
     color: rgb(15, 13, 13);
     font-weight: bold;
@@ -250,14 +214,12 @@ body{
     font-size: 1.1rem;
 }
 /* Skills */
-
-.skills h1{
+#skills h1{
     color:rgb(12, 11, 11);
     text-align: center;
     font-size: 3rem;
 }
-
-.skills hr{
+#skills hr{
     height: 5px;
     width: 60%;
     background-color:rgb(10, 10, 10);
@@ -287,8 +249,6 @@ body{
    box-shadow: 10px 10px 10px 5px rgb(10, 10, 10);
 
 }
-
-
 .skill-box h4{
     position: relative;
     top: -70px;
@@ -299,12 +259,10 @@ body{
     width: 70%;
     object-fit: contain;
 }
-
 .skill-box:hover{
 
     transform: translateY(-8px);
 }
-
 .container{
     
     width: 70%;
@@ -315,10 +273,8 @@ body{
     gap: 20px;
     margin-top: 20px;
 }
-
 .min-box{
     height: 510px;
-  
    background: linear-gradient(45deg,rgb(252, 250, 250),rgb(249, 249, 252));
    border-radius: 25px ;
    display: flex;
@@ -330,29 +286,26 @@ body{
 
 }
 
-.min-box h1{
+.min-box p{
     position: relative;
-    top: -160px;
-    left: 170px;
+    top: 0px;
+    right: -20px;
+   
 }
+
 .min-box:hover{
 
     transform: translateY(-8px);
 }
-
-
 /* contact box*/ 
 
 form{
     margin-top: 20px;
 }
-
 form label{
     display: block;
     margin: 5px 0 5px;
 }
-
-form input,
 form textarea{
     width: 100%;
     padding: 12px;
@@ -361,7 +314,6 @@ form textarea{
     color: #fff;
     margin-bottom: 15px;
 }
-
 form button{
     padding: 12px 20px;
     border: none;
@@ -374,7 +326,6 @@ form button{
 form button:hover{
     background-color: #12038a;
 }
-
 /* footer section*/
 .footerbox{
     height: 80px;
@@ -386,9 +337,146 @@ form button:hover{
     justify-content: center;
 
 }
-
 .footerbox p{
     
     color: white;
+}
+/* media query*/
+@media(max-width:480px){
+
+}
+
+
+@keyframes typing{
+    0%{width: 0}
+    20%{width: 27ch}
+    40%{width: 27ch}
+    50%{width: 0;}
+    60%{width: 0;}
+    80%{width: 26ch;}
+    100%{width: 26ch;}
+}
+
+@media (max-width: 992px){
+
+    .hero-container{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .profile-outer,
+    .info-outer{
+        width: 100%;
+        height: auto;
+    }
+
+    .profile{
+        height: 300px;
+        width: 300px;
+    }
+
+    .skill-outer{
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .container{
+        grid-template-columns: 1fr;
+    }
+
+    .min-box{
+        height: auto;
+        padding: 20px;
+    }
+}
+
+@media (max-width: 768px){
+
+    .navbar{
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px;
+    }
+
+    .menu{
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .hero-container{
+        padding: 10px;
+    }
+
+    .profile{
+        height: 250px;
+        width: 250px;
+    }
+
+    .info-outer h1{
+        font-size: 2rem;
+    }
+
+    .info-outer p{
+        font-size: 1rem;
+    }
+
+    .about-text{
+        width: 95%;
+    }
+
+    .about-text ul{
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .skill-outer{
+        grid-template-columns: 1fr;
+    }
+
+    .skill-box{
+        height: 180px;
+    }
+
+    .container{
+        width: 95%;
+    }
+
+    .min-box{
+        height: auto;
+        padding: 20px;
+    }
+
+    .min-box h1{
+        position: static;
+        margin-bottom: 15px;
+    }
+
+}
+
+@media (max-width: 480px){
+
+    .profile{
+        height: 200px;
+        width: 200px;
+    }
+
+    .info-outer h1{
+        font-size: 1.6rem;
+    }
+
+    .typing{
+        font-size: 18px;
+    }
+
+    .skill-box img{
+        height: 60%;
+        width: 60%;
+    }
+
+    .footerbox{
+        height: auto;
+        padding: 15px;
+        text-align: center;
+    }
 
 }
