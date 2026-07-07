@@ -24,7 +24,7 @@ body{
     justify-content: space-between;
     align-items: center;
     padding: 16px 45px;
-    background: linear-gradient(135deg, #010828, #011129);
+    background: green;
 }
 
 /* Logo */
